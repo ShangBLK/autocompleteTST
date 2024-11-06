@@ -1,5 +1,5 @@
 //package algs13;
-import stdlib.*;
+//import stdlib.*;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 /* ***********************************************************************
@@ -166,17 +166,5 @@ public class Queue<T> implements Iterable<T> {
 		}
 	}
 
-	/**
-	 * A test client.
-	 */
-	public static void main(String[] args) {
-		Queue<String> q = new Queue<>();
-		int count = 0;
-		while (!StdIn.isEmpty()) {
-			String item = StdIn.readString();
-			if (!item.equals("-")) q.enqueue(item);
-			else if (!q.isEmpty()) StdOut.print(q.dequeue() + " ");
-		}
-		StdOut.println("(" + q.size() + " left on queue)");
-	}
+
 }
