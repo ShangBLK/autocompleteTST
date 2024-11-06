@@ -1,4 +1,4 @@
-import stdlib.*;
+
 //import algs13.Queue;
 /* ***********************************************************************
  *  Compilation:  javac TST.java
@@ -158,21 +158,4 @@ public class TST<V> {
 		if (c == '.' || c > x.c) collect(x.right, prefix, i, pat, q);
 	}
 
-
-
-	// test client
-	public static void main(String[] args) {
-		// build symbol table from standard input
-		TST<Integer> st = new TST<>();
-		for (int i = 0; !StdIn.isEmpty(); i++) {
-			String key = StdIn.readString();
-			st.put(key, i);
-		}
-
-
-		// print results
-		for (String key : st.keys()) {
-			StdOut.println(key + " " + st.get(key));
-		}
-	}
 }
