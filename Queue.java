@@ -1,5 +1,5 @@
 //package algs13;
-import  stdlib.*;
+import stdlib.*;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 /* ***********************************************************************
@@ -166,35 +166,16 @@ public class Queue<T> implements Iterable<T> {
 		}
 	}
 
-	public void toGraphviz(String filename) {
-		GraphvizBuilder gb = new GraphvizBuilder ();
-		toGraphviz (gb, null, first);
-		gb.toFile (filename, "rankdir=\"LR\"");
-	}
-	private void toGraphviz (GraphvizBuilder gb, Node<T> prev, Node<T> n) {
-		if (n == null) { gb.addNullEdge (prev); return; }
-		gb.addLabeledNode (n, n.item.toString ());
-		if (prev != null) gb.addEdge (prev, n);
-		toGraphviz (gb, n, n.next);
-	}
-
 	/**
 	 * A test client.
 	 */
 	public static void main(String[] args) {
-		Trace.drawStepsOfMethod("main");
-		Trace.drawStepsOfMethod("enqueue");
-		Trace.drawStepsOfMethod("dequeue");
-		Trace.run();
-		StdIn.fromString ("to be or not to - be - - that - - - is");
 		Queue<String> q = new Queue<>();
 		int count = 0;
-		//q.toGraphviz ("queue" + count + ".png"); count++;
 		while (!StdIn.isEmpty()) {
 			String item = StdIn.readString();
 			if (!item.equals("-")) q.enqueue(item);
 			else if (!q.isEmpty()) StdOut.print(q.dequeue() + " ");
-			//q.toGraphviz ("queue" + count + ".png"); count++;
 		}
 		StdOut.println("(" + q.size() + " left on queue)");
 	}
