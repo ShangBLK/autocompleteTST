@@ -84,7 +84,14 @@ public class autocompleteTST {
             autocompleteTST autoCompleter = new autocompleteTST(fileName);
             Scanner inputScanner = new Scanner(System.in);
 
-            System.out.println("Enter a prefix to search:\nType 'exit' to quit\n'#' to add a word to the dictionary(e.g. word#)\n'*' to delete your current prefix(e.g. word*)\n-------------------------------------------​---");
+            String message = "Enter a prefix to search:\nType 'exit' to quit\n'#' to add a word to the dictionary(e.g. word#)\n'*' to delete your current prefix(e.g. word*)";
+            int borderLength = message.length() + 4; // 2 spaces padding on each side
+            String border = "-".repeat(borderLength);
+            
+            // Print the box
+            System.out.println(border);
+            System.out.println("- " + message + " -");
+            System.out.println(border);
 
             while(true) {
                 end = inputScanner.nextLine().trim();
