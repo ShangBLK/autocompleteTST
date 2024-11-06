@@ -90,7 +90,7 @@ public class autocompleteTST {
             
             // Print the box
             System.out.println(border);
-            System.out.println("- " + message + " -");
+            System.out.println(message);
             System.out.println(border);
 
             while(true) {
