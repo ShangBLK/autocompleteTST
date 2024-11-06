@@ -84,7 +84,7 @@ public class autocompleteTST {
             autocompleteTST autoCompleter = new autocompleteTST(fileName);
             Scanner inputScanner = new Scanner(System.in);
 
-            System.out.println("Enter a prefix to search:\nType 'exit' or 'e' to quit\n'#' to add a word to the dictionary(e.g. word#)\n'*' to delete your current prefix(e.g. word*)");
+            System.out.println("Enter a prefix to search:\nType 'exit' to quit\n'#' to add a word to the dictionary(e.g. word#)\n'*' to delete your current prefix(e.g. word*)");
             while(true) {
                 end = inputScanner.nextLine().trim();
                 userInput += end;
@@ -96,7 +96,7 @@ public class autocompleteTST {
                     flag = 1;
                 }
 
-                if(userInput.equalsIgnoreCase("exit") || userInput.equalsIgnoreCase("e")) {
+                if(userInput.equalsIgnoreCase("exit")) {
                     break;
                 }
                 if(flag == 1) {
