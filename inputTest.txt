@@ -1,0 +1,6 @@
+example 5
+excellent 3
+exit 2
+excite 4
+exceptional 1
+test 1
